@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: SRC
+    database: TESTING
+    schema: PUBLIC
+    tables:
+      - name: AX_TB
+      - name: NS_TB
+
+  - name: TARG
+    database: |
+      {%- if  target.name == "dev" -%} DEV
+      {%- elif target.name == "prod"  -%} PROD
+      {%- else -%} invalid_database
+      {%- endif -%}
+    schema: MYSCH
+    tables:
+      - name: SUPPLIER

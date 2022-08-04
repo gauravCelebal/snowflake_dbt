@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: ax_tb
+    config:
+      tags: 'ax'
+  - name: ax_tb2
+    config:
+      tags: 'ax'
+  - name: v_ax_current
+    config:
+      tags: 'ax'
+  - name: ns_tb
+    config:
+      tags: 'ns'
+  - name: v_ns_current
+    config:
+      tags: 'ns'
+  - name: int_tb
+    config:
+      tags: ['ax', 'ns']
+  - name: fnd_tb
+    config:
+      tags: ['ax', 'ns']
+
+    
